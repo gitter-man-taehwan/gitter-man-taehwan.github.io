@@ -36,16 +36,16 @@ export function Hero() {
   const defaultSocialLinks = [{"name":"Instagram","icon":"instagram","url":"https://instagram.com/username"},{"name":"YouTube","icon":"youtube","url":"https://youtube.com/@username"}]
   
   const defaultInfo = {
-    greeting: "안녕하세요,",
+    greeting: "평(坪)을 보던 눈으로, 퍼센트(%)를 본다.",
     name: "박태환",
-    title: "수정중",
-    description: "프롭테크 기술로 부동산 시장을 분석합니다.",
-    profileImage: "/uploads/hero-profile-1761477237286.png",
+    title: "지원자",
+    description: "공간의 가치를 읽고, 자본의 언어로 말한다.",
+    profileImage: "/uploads/hero-profile-1762244042297.jpg",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: {"image":"","video":"","color":"#f41010","opacity":0.5}
+    background: {"image":"","video":"","color":"","opacity":0}
   }
 
   const [backgroundData, setBackgroundData] = useState<{ image: string; video: string; color: string; opacity: number } | null>(null)
