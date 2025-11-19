@@ -323,3 +323,60 @@ html, body {
     padding: 2rem 1.5rem 2.5rem;
   }
 }
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #e2e8f0;
+}
+
+.card-link:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.skill-table {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 1.4fr 3fr 0.8fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4f46e5, #22c55e);
+}
+
+.skill-score {
+  font-size: 0.9rem;
+  text-align: right;
+  color: #4b5563;
+}

@@ -27,6 +27,9 @@ export default function Home() {
               <a href="#projects" className="btn ghost">
                 프로젝트
               </a>
+              <a href="#skills" className="btn ghost">
+                스킬
+              </a>
               <a href="#resume" className="btn ghost">
                 이력서
               </a>
@@ -112,18 +115,61 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SKILLS */}
+        {/* SKILLS (업그레이드 버전) */}
         <section id="skills" className="section">
           <h2 className="section-title">Skills</h2>
-          <p className="section-desc">제가 익힌 기술과 분석 능력들입니다.</p>
+          <p className="section-desc">
+            학회·수업·프로젝트를 기준으로 5점 만점 자기 평가를 정리했습니다.
+          </p>
 
-          <div className="skill-grid">
-            <div className="skill">📊 Real Estate Analysis</div>
-            <div className="skill">🏦 PF / Trust Structure</div>
-            <div className="skill">🏙 Housing Policy</div>
-            <div className="skill">📚 Asset Management</div>
-            <div className="skill">💻 Python / Excel</div>
-            <div className="skill">📈 기업/산업 리서치</div>
+          <div className="skill-table">
+            <div className="skill-row">
+              <div className="skill-name">📊 Real Estate Analysis</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "85%" }} />
+              </div>
+              <div className="skill-score">4.3 / 5.0</div>
+            </div>
+
+            <div className="skill-row">
+              <div className="skill-name">🏦 PF / Trust Structure</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "80%" }} />
+              </div>
+              <div className="skill-score">4.0 / 5.0</div>
+            </div>
+
+            <div className="skill-row">
+              <div className="skill-name">🏙 Housing Policy</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "75%" }} />
+              </div>
+              <div className="skill-score">3.8 / 5.0</div>
+            </div>
+
+            <div className="skill-row">
+              <div className="skill-name">📚 Asset Management</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "70%" }} />
+              </div>
+              <div className="skill-score">3.5 / 5.0</div>
+            </div>
+
+            <div className="skill-row">
+              <div className="skill-name">💻 Python / Excel</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "65%" }} />
+              </div>
+              <div className="skill-score">3.3 / 5.0</div>
+            </div>
+
+            <div className="skill-row">
+              <div className="skill-name">📈 기업/산업 리서치</div>
+              <div className="skill-bar">
+                <div className="skill-bar-fill" style={{ width: "80%" }} />
+              </div>
+              <div className="skill-score">4.0 / 5.0</div>
+            </div>
           </div>
         </section>
 
