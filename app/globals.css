@@ -1,230 +1,325 @@
-@import "tailwindcss";
-@import "./safelist.css";
 
-/* Tailwind v4 테마 설정 */
-@theme {
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(0 0% 3.9%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(0 0% 3.9%);
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(0 0% 3.9%);
-  --color-primary: hsl(0 0% 9%);
-  --color-primary-foreground: hsl(0 0% 98%);
-  --color-secondary: hsl(0 0% 96.1%);
-  --color-secondary-foreground: hsl(0 0% 9%);
-  --color-muted: hsl(0 0% 96.1%);
-  --color-muted-foreground: hsl(0 0% 45.1%);
-  --color-accent: hsl(0 0% 96.1%);
-  --color-accent-foreground: hsl(0 0% 9%);
-  --color-destructive: hsl(0 84.2% 60.2%);
-  --color-destructive-foreground: hsl(0 0% 98%);
-  --color-border: hsl(0 0% 89.8%);
-  --color-input: hsl(0 0% 89.8%);
-  --color-ring: hsl(0 0% 3.9%);
-  --radius: 0.5rem;
+/* 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* CSS 변수 (컴포넌트 호환성) */
-:root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
-  --ring: 0 0% 3.9%;
-  --radius: 0.5rem;
+html, body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-.dark {
-  --color-background: hsl(0 0% 3.9%);
-  --color-foreground: hsl(0 0% 98%);
-  --color-card: hsl(0 0% 3.9%);
-  --color-card-foreground: hsl(0 0% 98%);
-  --color-popover: hsl(0 0% 3.9%);
-  --color-popover-foreground: hsl(0 0% 98%);
-  --color-primary: hsl(0 0% 98%);
-  --color-primary-foreground: hsl(0 0% 9%);
-  --color-secondary: hsl(0 0% 14.9%);
-  --color-secondary-foreground: hsl(0 0% 98%);
-  --color-muted: hsl(0 0% 14.9%);
-  --color-muted-foreground: hsl(0 0% 63.9%);
-  --color-accent: hsl(0 0% 14.9%);
-  --color-accent-foreground: hsl(0 0% 98%);
-  --color-destructive: hsl(0 62.8% 30.6%);
-  --color-destructive-foreground: hsl(0 0% 98%);
-  --color-border: hsl(0 0% 14.9%);
-  --color-input: hsl(0 0% 14.9%);
-  --color-ring: hsl(0 0% 83.1%);
-  
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 0 0% 83.1%;
+/* 전체 컨테이너 */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Pretendard 폰트 설정 */
-@layer base {
-  body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    word-break: keep-all; /* 한글 줄바꿈 최적화 */
-    overflow-wrap: break-word;
-  }
+/* 공통 섹션 */
+.section {
+  margin-top: 5rem;
 }
 
-
-/* 모바일 우선 설정 */
-@layer base {
-  * {
-    border-color: hsl(240 5.9% 90%);
-  }
-  
-  html {
-    @apply scroll-smooth;
-    font-size: 16px; /* 모바일 기본 폰트 크기 */
-  }
-  
-  body {
-    @apply bg-background text-foreground;
-    min-height: 100vh;
-    min-height: 100dvh; /* 모바일 뷰포트 대응 */
-  }
-  
-  /* 모바일 탭 대상 최소 크기 보장 */
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-    @apply touch-manipulation;
-  }
-  
-  /* 모바일 안전 영역 */
-  .safe-area-inset {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-/* 반응형 타이포그래피 */
-@layer utilities {
-  .text-responsive-xs {
-    @apply text-xs sm:text-sm;
-  }
-  
-  .text-responsive-sm {
-    @apply text-sm sm:text-base;
-  }
-  
-  .text-responsive-base {
-    @apply text-base sm:text-lg;
-  }
-  
-  .text-responsive-lg {
-    @apply text-lg sm:text-xl lg:text-2xl;
-  }
-  
-  .text-responsive-xl {
-    @apply text-xl sm:text-2xl lg:text-3xl;
-  }
-  
-  .text-responsive-2xl {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
-  }
-  
-  .text-responsive-3xl {
-    @apply text-3xl sm:text-4xl lg:text-5xl;
-  }
-  
-  .text-responsive-4xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl;
-  }
+.section-desc {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
 }
 
-
-/* 부드러운 그림자 */
-@layer utilities {
-  .shadow-soft {
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  }
-  
-  .shadow-soft-lg {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-  }
-  
-  .shadow-soft-xl {
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
-  }
+/* HERO */
+.hero {
+  padding: 6rem 1rem 4rem;
+  text-align: left;
 }
 
-/* 애니메이션 */
-@layer utilities {
-  .animate-in {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
+.hero-inner {
+  max-width: 700px;
 }
 
-/* 모바일 뷰포트 헤이트 대응 */
-@supports (height: 100dvh) {
-  .h-screen {
-    height: 100dvh;
+.tag {
+  background: rgba(148,163,184,0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 2.6rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid rgba(148,163,184,0.4);
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  color: #e2e8f0;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 2px solid rgba(148,163,184,0.4);
+  padding-left: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.dot {
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* PROJECT CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+}
+
+.card {
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.3);
+  padding: 1.5rem;
+  border-radius: 0.9rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+  color: #a5b4fc;
+}
+
+/* SKILLS GRID */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.skill {
+  background: rgba(30,41,59,0.9);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  border: 1px solid rgba(148,163,184,0.3);
+}
+
+/* CONTACT */
+.contact-box {
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.3);
+  padding: 1.5rem;
+  border-radius: 0.9rem;
+}
+
+.contact-box span {
+  font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: #64748b;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  padding-bottom: 2rem;
+}
+/* ========== RESUME PAGE ========== */
+
+.resume-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: #f3f4f6;
+}
+
+.resume-wrapper {
+  width: 100%;
+  max-width: 960px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.18);
+}
+
+/* 왼쪽 영역 */
+.resume-left {
+  background: #e5e5e5;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111827;
+}
+
+.resume-photo img {
+  width: 180px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  background: #ddd;
+}
+
+.resume-left-block {
+  width: 100%;
+}
+
+.resume-left-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #8b3a3a;
+  margin-bottom: 1rem;
+}
+
+.resume-info-list div {
+  margin-bottom: 1.1rem;
+}
+
+.resume-info-list dt {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.resume-info-list dd {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* 오른쪽 영역 */
+.resume-right {
+  background: #f1f1f1;
+  padding: 2rem 2.5rem 2.5rem;
+  position: relative;
+  color: #111827;
+}
+
+.resume-top-line {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #000;
+}
+
+.resume-section {
+  margin-top: 3.5rem;
+}
+
+.resume-right-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #8b3a3a;
+  margin-bottom: 1rem;
+}
+
+/* 테이블 스타일 */
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #fdfdfd;
+}
+
+.resume-table thead th {
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 2px solid #b0b0b0;
+  font-weight: 600;
+}
+
+.resume-table tbody td {
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid #d4d4d4;
+  vertical-align: top;
+}
+
+.resume-table tbody tr:nth-child(2n) {
+  background: #fafafa;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 768px) {
+  .resume-wrapper {
+    grid-template-columns: 1fr;
   }
-  
-  .min-h-screen {
-    min-height: 100dvh;
+
+  .resume-left {
+    align-items: flex-start;
+  }
+
+  .resume-photo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .resume-right {
+    padding: 2rem 1.5rem 2.5rem;
   }
 }
