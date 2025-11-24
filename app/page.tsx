@@ -12,7 +12,6 @@ export default function Home() {
     { name: "📈 기업·산업 리서치", rate: 0.8, score: "4.0" },
   ];
 
-  // 스크롤할 때 섹션/카드 등장 이펙트
   React.useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>(".reveal");
 
@@ -29,7 +28,6 @@ export default function Home() {
 
     revealElements.forEach((el) => observer.observe(el));
 
-    // cleanup은 대충 무시해도 되지만, 혹시 모를 메모리 방지용
     return () => {
       revealElements.forEach((el) => observer.unobserve(el));
     };
@@ -48,7 +46,7 @@ export default function Home() {
                 PORTFOLIO · REAL ESTATE &amp; FINANCE
               </p>
 
-              <h1 className="hero-banner-name">PARK TAE HWAN</h1>
+              <h1 className="hero-banner-name">박태환</h1>
 
               <p className="hero-banner-title">
                 평(坪)을 보던 눈으로, 퍼센트(%)를 봅니다.
@@ -69,7 +67,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="hero-icon">📍</span>
-                  <span>경기도 용인 · 부동산학과 4학년</span>
+                  <span>경기도 용인 · 단국대학교 부동산학과</span>
                 </div>
               </div>
 
@@ -101,29 +99,62 @@ export default function Home() {
           <p className="section-desc">제가 걸어온 길을 시간순으로 정리했습니다.</p>
 
           <div className="timeline">
+            {/* 1. 리셀 */}
             <div className="timeline-item">
               <div className="dot" />
-              <h3>2019~2020 · "Kream" 플랫폼 리셀</h3>
-              <p>노동의 한계와 자본의 크기를 체감했습니다.</p>
+              <h3>2019~2020 · "Kream" 플랫폼 리셀러</h3>
+              <p>
+                리셀 경험으로 ‘가치를 빠르게 읽는 눈’을 갖게 되었습니다.
+                <br />
+                작은 거래를 넘어서 더 큰 시장을 배우고 싶다는 방향성이 생겼습니다.
+              </p>
             </div>
 
+            {/* 2. 군 복무 */}
             <div className="timeline-item">
               <div className="dot" />
-              <h3>2020 · 군 전역 후 편입 준비</h3>
-              <p>기초부터 다시 공부하며 1년 반 투자했습니다.</p>
+              <h3>2020~2022 · 대한민국 육군 병역 이행(지휘관 운전병)</h3>
+              <p>
+                지휘관을 모시며 기본 예의와 태도가 어떤 상황에서도 흔들리면
+                안 된다는 것을 깨달았습니다.
+              </p>
             </div>
 
+            {/* 3. 편입 준비 & 성공 */}
             <div className="timeline-item">
               <div className="dot" />
-              <h3>2022 · 부동산학과 편입 성공</h3>
-              <p>본격적으로 금융·자산관리 공부 시작.</p>
+              <h3>2022~2024 · 단국대학교 부동산학과 편입 성공</h3>
+              <p>
+                더 큰 시장을 목표로 삼고 기초를 쌓기 위해 편입공부에 몰입했고,
+                <br />
+                새벽 신문배달과 병행하며 끝까지 버틴 결과 부동산학과 편입에
+                성공했습니다.
+              </p>
             </div>
 
+            {/* 4. 학회·리포트·정책 분석 */}
             <div className="timeline-item">
               <div className="dot" />
-              <h3>2023~2025 · 학회·리포트·정책 분석</h3>
-              <p>PF·신탁·정책·기업분석 등 다양한 실무 분석 수행.</p>
+              <h3>2024.07 ~ 2024.08 / 2025.01 ~ 2025.02 · 동양엔지니어링 사무보조</h3>
+              <p>
+                문서 정리·발주처 서류 전달, 감리 현장 동행 등 
+                사무·현장 지원 업무를 수행했습니다.
+            
+              </p>
             </div>
+
+            {/*
+            // 5. 연혁 한 칸 더 추가하고 싶을 때 참고용 템플릿
+            <div className="timeline-item">
+              <div className="dot" />
+              <h3>20XX~20XX · 추가 연혁 제목</h3>
+              <p>
+                첫 번째 문장입니다.
+                <br />
+                두 번째 문장을 이렇게 아래 줄에 적으면 됩니다.
+              </p>
+            </div>
+            */}
           </div>
         </section>
 
