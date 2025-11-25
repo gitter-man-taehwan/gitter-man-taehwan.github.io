@@ -132,29 +132,15 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 4. 학회·리포트·정책 분석 */}
+            {/* 4. 동양엔지니어링 사무보조 */}
             <div className="timeline-item">
               <div className="dot" />
               <h3>2024.07 ~ 2024.08 / 2025.01 ~ 2025.02 · 동양엔지니어링 사무보조</h3>
               <p>
-                문서 정리·발주처 서류 전달, 감리 현장 동행 등 
-                사무·현장 지원 업무를 수행했습니다.
-            
+                문서 정리·발주처 서류 전달, 감리 현장 동행 등 사무·현장 지원 업무를
+                수행했습니다.
               </p>
             </div>
-
-            {/*
-            // 5. 연혁 한 칸 더 추가하고 싶을 때 참고용 템플릿
-            <div className="timeline-item">
-              <div className="dot" />
-              <h3>20XX~20XX · 추가 연혁 제목</h3>
-              <p>
-                첫 번째 문장입니다.
-                <br />
-                두 번째 문장을 이렇게 아래 줄에 적으면 됩니다.
-              </p>
-            </div>
-            */}
           </div>
         </section>
 
@@ -164,6 +150,7 @@ export default function Home() {
           <p className="section-desc">학회·수업 기반 실전 프로젝트입니다.</p>
 
           <div className="cards">
+            {/* 1. 평택 동삭동 IM */}
             <div className="card reveal">
               <div className="card-image">
                 <img src="/projects/pyeongtaek-im-thumb.png" alt="IM" />
@@ -183,14 +170,15 @@ export default function Home() {
               </a>
             </div>
 
+            {/* 2. 평택 동삭동 PF 사업수지표 */}
             <div className="card reveal">
               <div className="card-image">
                 <img src="/projects/pyeongtaek-pf-thumb.png" alt="PF" />
               </div>
               <h3>PF 사업수지표 - 평택 동삭동</h3>
               <p>
-                총사업비, 필수사업비, 분양수입, LTV 분석 등 PF 금융모델 원천
-                데이터 구성.
+                총사업비를 기준으로 PF 사업수지표를 작성하고 exit 분양률을
+                산출한 프로젝트입니다.
               </p>
               <a
                 className="card-link"
@@ -202,7 +190,209 @@ export default function Home() {
               </a>
             </div>
 
+            {/* 3. 주담대 금리 지연효과 분석 */}
             <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/mortgage-lag-thumb.png"
+                  alt="주택담보대출금리 지연효과 분석"
+                />
+              </div>
+              <h3>주택담보대출금리의 지연효과에 관한 실증분석</h3>
+              <p>
+                2010~2024년 주택담보대출금리와 주택가격지수·거래량의 시차효과를
+                VAR·Granger 검정으로 분석한 실증 연구 보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/mortgage-lag-effect.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 4. 프로젝트 리츠 & PF 대출 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/project-reits-thumb.png"
+                  alt="프로젝트 리츠와 PF 대출 비교"
+                />
+              </div>
+              <h3>
+                프로젝트 리츠의 구조적 특징과 PF 대출의 대체 가능성에 대한 실증적 고찰
+              </h3>
+              <p>
+                프로젝트 리츠의 구조적 특징과 PF 대출의 대체 가능성을,
+                하남 교산신도시 적용 시나리오와 해외 사례 비교를 통해 검토한
+                보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/project-reits-vs-pf.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 5. 인구구조와 주택시장 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/population-housing-structure-thumb.png"
+                  alt="인구구조와 주택시장"
+                />
+              </div>
+              <h3>인구구조 변화가 주택시장에 미치는 영향 -대전시-</h3>
+              <p>
+                인구구조 변화가 주택 수요·공급과 가격·거래량에 미치는 영향을 
+                연령별 인구구성, 순이동자수, 가구 구조 등을 중심으로 분석한
+                연구 리포트입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/population-housing-structure.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 6. 8·16 주택공급정책 분석 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/housing-supply-816-policy-thumb.png"
+                  alt="8·16 주택공급정책 분석"
+                />
+              </div>
+              <h3>
+                주택 공급정책 사례분석과 효과성 평가 - 윤석열 정부의 8·16 대책 -
+              </h3>
+              <p>
+                윤석열 정부 8·16 대책을 중심으로 주요 주택공급정책의 구조와
+                실행과정을 비교·분석하고 공급 확대 효과와 한계를 평가한
+                정책 분석 보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/housing-supply-816-policy.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 7. 대구 주택시장 수요·공급 사례 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/daegu-housing-demand-supply-thumb.png"
+                  alt="대구 주택시장 수요·공급 분석"
+                />
+              </div>
+              <h3>주택시장의 수요와 공급 원리의 적용 사례 분석 -대구시를 중심으로- </h3>
+              <p>
+                대구 주택시장을 사례로 2020~2025년 준공실적·거래량·가격·미분양
+                재고를 분석해 수요·공급 이론이 실제 시장에서 어떻게 작동하고
+                괴리되는지 검토한 실증 보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/daegu-housing-demand-supply.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 8. DSR 정책 리포트 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/dsr-impact-housing-finance-thumb.png"
+                  alt="DSR 정책이 주택금융시장에 미친 영향 분석"
+                />
+              </div>
+              <h3>DSR 정책이 주택금융시장에 미친 영향 분석</h3>
+              <p>
+                총부채원리금상환비율(DSR) 및 스트레스 DSR 도입 이후,
+                주택담보대출·거래량·가격지수 변화를 통해 규제 효과와 한계를
+                분석한 보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/dsr-impact-housing-finance.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 9. 둔촌주공 재건축 PF 리포트 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/reconstruction-pf-risk-dunchonju-thumb.png"
+                  alt="재건축 PF사업의 구조적 리스크와 제도적 개선방안"
+                />
+              </div>
+              <h3>
+                재건축 PF사업의 구조적 리스크와 제도적 개선방안 - 둔촌주공 사례를 중심으로
+              </h3>
+              <p>
+                둔촌주공 재건축 PF의 구조, 시공사 지급보증, 정부 개입 과정을
+                정리하고 PF 구조 리스크와 제도적 개선방안을 제시한 사례 분석 리포트입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/reconstruction-pf-risk-dunchonju.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 10. 스폰서 리츠 구조 분석 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/sponsor-reits-limitations-icheon-water-center-thumb.png"
+                  alt="국내 스폰서 리츠의 구조적 한계와 개선방안"
+                />
+              </div>
+              <h3>
+                국내 스폰서 리츠의 구조적 한계와 개선방안 - 이천 수처리센터 사례
+              </h3>
+              <p>
+                이천 수처리센터 편입 사례를 통해 스폰서 리츠의 자본조달 구조와
+                이해상충 리스크를 분석하고, 해외 사례와 프로젝트 리츠를 활용한
+                개선방안을 제안한 보고서입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/sponsor-reits-limitations-icheon-water-center.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 11. New Project */}
+            <div className="card reveal card-empty">
+              <div className="card-image card-image-empty">
+                <span>+</span>
+              </div>
               <h3>New Project</h3>
               <p>새로운 프로젝트가 추가될 예정입니다.</p>
             </div>
