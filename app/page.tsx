@@ -4,12 +4,12 @@ import React from "react";
 
 export default function Home() {
   const skills = [
-    { name: "📊 Real Estate Analysis", rate: 0.85, score: "4.3" },
-    { name: "🏦 PF / Trust Structure", rate: 0.8, score: "4.0" },
-    { name: "🏙 Housing Policy", rate: 0.75, score: "3.8" },
-    { name: "📚 Asset Management", rate: 0.7, score: "3.5" },
-    { name: "💻 Python / Excel", rate: 0.65, score: "3.3" },
-    { name: "📈 기업·산업 리서치", rate: 0.8, score: "4.0" },
+    { name: "📊 MS Office Advanced (Excel·PPT·Word)", rate: 0.82, score: "4.1" },
+    { name: "💻 Python Programming (Pandas·Matplotlib)", rate: 0.76, score: "3.8" },
+    { name: "🖥 VS Code & Git Bash Workflow", rate: 0.74, score: "3.7" },
+    { name: "📉 Econometrics (VAR·Granger·ADF)", rate: 0.72, score: "3.6" },
+    { name: "🌍 GIS·입지분석 (국토부 자료·QGIS)", rate: 0.68, score: "3.4" },
+    { name: "📝 Business Report Writing", rate: 0.70, score: "3.5" },
   ];
 
   React.useEffect(() => {
@@ -71,12 +71,16 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* === 동그라미 버튼 3개: Project / Contact / Resume === */}
               <div className="hero-banner-buttons">
                 <a href="#projects" className="hero-btn primary">
-                  프로젝트 보기
+                  Project
                 </a>
                 <a href="#contact" className="hero-btn ghost">
                   Contact
+                </a>
+                <a href="#resume-section" className="hero-btn ghost">
+                  Resume
                 </a>
               </div>
             </div>
@@ -249,7 +253,7 @@ export default function Home() {
               </div>
               <h3>인구구조 변화가 주택시장에 미치는 영향 -대전시-</h3>
               <p>
-                인구구조 변화가 주택 수요·공급과 가격·거래량에 미치는 영향을 
+                인구구조 변화가 주택 수요·공급과 가격·거래량에 미치는 영향을
                 연령별 인구구성, 순이동자수, 가구 구조 등을 중심으로 분석한
                 연구 리포트입니다.
               </p>
@@ -297,7 +301,9 @@ export default function Home() {
                   alt="대구 주택시장 수요·공급 분석"
                 />
               </div>
-              <h3>주택시장의 수요와 공급 원리의 적용 사례 분석 -대구시를 중심으로- </h3>
+              <h3>
+                주택시장의 수요와 공급 원리의 적용 사례 분석 -대구시를 중심으로-
+              </h3>
               <p>
                 대구 주택시장을 사례로 2020~2025년 준공실적·거래량·가격·미분양
                 재고를 분석해 수요·공급 이론이 실제 시장에서 어떻게 작동하고
@@ -388,7 +394,31 @@ export default function Home() {
               </a>
             </div>
 
-            {/* 11. New Project */}
+            {/* 11. 한미반도체 기업 리서치 */}
+            <div className="card reveal">
+              <div className="card-image">
+                <img
+                  src="/projects/hanmi-semiconductor-equity-research-thumb.png"
+                  alt="한미반도체 기업·밸류에이션 리서치"
+                />
+              </div>
+              <h3>한미반도체(042700) 기업·밸류에이션 리서치</h3>
+              <p>
+                HBM 성장과 TC Bonder 경쟁력을 중심으로 한미반도체의 사업 구조와
+                글로벌 전략을 분석하고, DCF·상대가치평가를 통해 목표주가를
+                산출한 종합 기업 리포트입니다.
+              </p>
+              <a
+                className="card-link"
+                href="/projects/hanmi-semiconductor-equity-research.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                리포트 열기 →
+              </a>
+            </div>
+
+            {/* 12. New Project */}
             <div className="card reveal card-empty">
               <div className="card-image card-image-empty">
                 <span>+</span>
@@ -403,7 +433,7 @@ export default function Home() {
         <section className="section reveal">
           <h2 className="section-title">Skills</h2>
           <p className="section-desc">
-            학회·수업·프로젝트 기반 5점 만점 자기 평가입니다.
+            실무에 바로 활용 가능한 도구·분석 역량을 5점 만점 기준으로 정리했습니다.
           </p>
 
           <div className="skill-table">
@@ -535,11 +565,11 @@ export default function Home() {
                   <td>
                     단국대학교 금융학회 IF 33–34기
                     <br />
-                    · 기업분석 보고서 작성 (비교스터디)
+                    · 기업분석 보고서 작성 (메가스터디교육)
                     <br />
                     · 기업분석 보고서 작성 (한미반도체)
                     <br />
-                    · DCF 리포트 도출
+                    · DIFF 펀드 운용
                   </td>
                 </tr>
                 <tr>
@@ -547,18 +577,22 @@ export default function Home() {
                   <td>
                     단국대학교 도시개발·부동산학회 URID 12기
                     <br />
-                    · 지역 임장활동 수행
+                    · '성수 SK V1 센터' 임장활동
                     <br />
-                    · 선배 인터뷰 진행
+                    · 선배 인터뷰 진행 (신탁사)
                     <br />
-                    · 개발 프로젝트 (상업용 테마로제스) 분석
+                    · 개발 IM 프로젝트 (동삭동 라움프라자)
                     <br />
-                    · 판교, 둔전·경기용인 처인 일대 부동산 타겟지 발표
+                    · 단·중·건 연합학술제 해외 부동산 리서치 발표
                   </td>
                 </tr>
                 <tr>
                   <td>2024.12 ~ 2025.02</td>
-                  <td>금융사관학교 기업금융 과정 (예정 수료)</td>
+                  <td>금융사관학교 기업금융 과정 (최우수조 수료)</td>
+                </tr>
+                <tr>
+                  <td>2024.07 ~ 2024.08 / 2025.01 ~ 2025.02</td>
+                  <td>동양엔지니어링 사무보조</td>
                 </tr>
               </tbody>
             </table>
